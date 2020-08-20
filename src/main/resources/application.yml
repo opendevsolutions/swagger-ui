@@ -8,19 +8,19 @@ spring:
 server:
   port: 8014
   servlet:
-    contextPath: /swagger-api
+    contextPath: /api/swagger-api
 
 documentation: 
-  baseurl: ${BASE_URI:http://swagger-ui-ci-sume-dev.apps.openshift.ase.local}
+  baseurl: ${BASE_URI}
   swagger: 
-    services:   
+    services: 
+      -    
+        name: amq-api
+        url: ${documentation.baseurl}/amq/swagger
+        version: 2.0    
       -
         name: asociados
         url: ${documentation.baseurl}/asociados/v2/api-docs
-        version: 2.0
-      - 
-        name: grupoFamiliar
-        url: ${documentation.baseurl}/grupoFamiliar/v2/api-docs
         version: 2.0
       - 
         name: comision-venta-api
@@ -30,9 +30,17 @@ documentation:
         name: commons-api
         url: ${documentation.baseurl}/commons/v2/api-docs
         version: 2.0
+      -    
+        name: engage-integracion-api
+        url: ${documentation.baseurl}/engageIntegracion/v2/api-docs
+        version: 2.0
       - 
         name:  empresa-api
         url: ${documentation.baseurl}/empresas/v2/api-docs
+        version: 2.0
+      - 
+        name: grupoFamiliar
+        url: ${documentation.baseurl}/grupoFamiliar/v2/api-docs
         version: 2.0
       -
         name:  obra-social-api
@@ -46,14 +54,12 @@ documentation:
         name:  presupuesto-api
         url: ${documentation.baseurl}/presupuestos/v2/api-docs
         version: 2.0
+      -    
+        name: rhpam-api
+        url: ${documentation.baseurl}/rhpam/swagger
+        version: 2.0
       - 
         name: valorizacion-api
         url: ${documentation.baseurl}/valorizacion/v2/api-docs
         version: 2.0
-      -    
-        name: vendedor-api
-        url: ${documentation.baseurl}/vendedores/v2/api-docs
-        version: 2.0
-
- 
     
