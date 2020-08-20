@@ -1,0 +1,57 @@
+---
+info:
+  component: Default Single Swagger Document Server for MicroService
+
+spring:
+  profiles: default
+
+server:
+  port: 8014
+
+documentation: 
+  baseurl: http://localhost
+  swagger: 
+    services:   
+      -
+        name: asociados
+        url: ${documentation.baseurl}/asociados/v2/api-docs
+        version: 2.0
+      - 
+        name: grupoFamiliar
+        url: ${documentation.baseurl}/grupoFamiliar/v2/api-docs
+        version: 2.0
+      - 
+        name: comision-venta-api
+        url: ${documentation.baseurl}/comisiones-ventas/v2/api-docs
+        version: 2.0
+      - 
+        name: commons-api
+        url: ${documentation.baseurl}/commons/v2/api-docs
+        version: 2.0
+      - 
+        name:  empresa-api
+        url: ${documentation.baseurl}/empresas/v2/api-docs
+        version: 2.0
+      -
+        name:  obra-social-api
+        url: ${documentation.baseurl}/obrasSociales/v2/api-docs
+        version: 2.0
+      - 
+        name:  payment-manager-api
+        url: ${documentation.baseurl}/responsablePagoApi/v2/api-docs
+        version: 2.0
+      - 
+        name:  presupuesto-api
+        url: ${documentation.baseurl}/presupuestos/v2/api-docs
+        version: 2.0
+      - 
+        name: valorizacion-api
+        url: ${documentation.baseurl}/valorizacion/v2/api-docs
+        version: 2.0
+      -    
+        name: vendedor-api
+        url: ${documentation.baseurl}/vendedores/v2/api-docs
+        version: 2.0
+
+ 
+    
