@@ -11,7 +11,7 @@ server:
     contextPath: /swagger-api
 
 documentation: 
-  baseurl: http://swagger-ui-ci-sume-dev.apps.openshift.ase.local
+  baseurl: ${BASE_URI:http://swagger-ui-ci-sume-dev.apps.openshift.ase.local}
   swagger: 
     services:   
       -
